@@ -1,4 +1,8 @@
 {
+  "homepage": "https://incosta1983.github.io/sistema-escala-trabalho",
+  "name": "meu-sistema-de-escalas",
+  "private": true,
+{
   "name": "escalahome",
   "private": true,
   "version": "0.0.0",
