@@ -1,0 +1,18 @@
+.person-card-expanded {
+  animation: expandCard 0.3s ease-out;
+}
+
+@keyframes expandCard {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
