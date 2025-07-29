@@ -24,5 +24,8 @@ export default defineConfig({
         entryFileNames: 'assets/js/[name].[hash].js'
       }
     }
+  },
+  css: {
+    postcss: './postcss.config.mjs'
   }
 })
