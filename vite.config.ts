@@ -14,16 +14,15 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: undefined,
-        assetFileNames: 'assets/[name].[hash].[ext]',
-        chunkFileNames: 'assets/[name].[hash].js',
-        entryFileNames: 'assets/[name].[hash].js'
+        assetFileNames: ({ name }) => {
+          if (/\.(gif|jpe?g|png|svg)$/.test(name ?? '')) {
+            return 'assets/images/[name].[hash][extname]'
+          }
+          return 'assets/[name].[hash][extname]'
+        },
+        chunkFileNames: 'assets/js/[name].[hash].js',
+        entryFileNames: 'assets/js/[name].[hash].js'
       }
-    }
-  },
-  css: {
-    postcss: './postcss.config.cjs',
-    modules: {
-      localsConvention: 'camelCase'
     }
   }
 })
